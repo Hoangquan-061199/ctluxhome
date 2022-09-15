@@ -34,6 +34,24 @@ li {
   padding: 0 !important;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.f-col {
+  flex-direction: column;
+}
+
 /*! Header */
 .header {
   height: 92px;
@@ -389,6 +407,11 @@ li {
   padding-top: 44px;
 }
 
+.content__hotdeals-products {
+  display: flex;
+  justify-content: space-between;
+}
+
 .content__hotdeals-title {
   display: flex;
   align-items: center;
@@ -493,6 +516,7 @@ li {
   font-size: 14px;
   border: 2px solid #595959;
   border-radius: 30px;
+  background-color: var(--color-white);
 }
 
 .addcart-repeat {
@@ -509,17 +533,23 @@ li {
   border-radius: 50%;
 }
 
+/* list product */
+
 .product__news,
 .product__outstanding {
   margin: 0 10px;
   position: relative;
 }
 
+.product__news .product__list-item,
+.product__outstanding .product__list-item {
+  width: 210px;
+}
+
 .product__list-item {
   background-color: var(--color-white);
-  width: 210px;
   padding: 15px;
-  margin: 9px;
+  margin: 7px;
 }
 
 .product__list-item img {
@@ -736,36 +766,36 @@ li {
   margin: 0 0;
 }
 
-.content__product-wash .product__list,
-.content__product-oven .product__list,
-.content__product-dishwasher .product__list,
-.content__product-cooker .product__list {
+.content__product-wash .product__lists,
+.content__product-oven .product__lists,
+.content__product-dishwasher .product__lists,
+.content__product-cooker .product__lists {
   position: relative;
 }
 
-.content__product-wash .product__list .prev-next-btn,
-.content__product-oven .product__list .prev-next-btn,
-.content__product-dishwasher .product__list .prev-next-btn,
-.content__product-cooker .product__list .prev-next-btn {
+.content__product-wash .product__lists .prev-next-btn,
+.content__product-oven .product__lists .prev-next-btn,
+.content__product-dishwasher .product__lists .prev-next-btn,
+.content__product-cooker .product__lists .prev-next-btn {
   position: absolute;
   top: 85px;
   left: 0;
   right: 0;
 }
 
-.content__product-wash .product__list .prev-next-btn .prev-btn,
-.content__product-oven .product__list .prev-next-btn .prev-btn,
-.content__product-dishwasher .product__list .prev-next-btn .prev-btn,
-.content__product-cooker .product__list .prev-next-btn .prev-btn {
+.content__product-wash .product__lists .prev-next-btn .prev-btn,
+.content__product-oven .product__lists .prev-next-btn .prev-btn,
+.content__product-dishwasher .product__lists .prev-next-btn .prev-btn,
+.content__product-cooker .product__lists .prev-next-btn .prev-btn {
   position: absolute;
   left: 0;
   display: none;
 }
 
-.content__product-wash .product__list .prev-next-btn .next-btn,
-.content__product-oven .product__list .prev-next-btn .next-btn,
-.content__product-dishwasher .product__list .prev-next-btn .next-btn,
-.content__product-cooker .product__list .prev-next-btn .next-btn {
+.content__product-wash .product__lists .prev-next-btn .next-btn,
+.content__product-oven .product__lists .prev-next-btn .next-btn,
+.content__product-dishwasher .product__lists .prev-next-btn .next-btn,
+.content__product-cooker .product__lists .prev-next-btn .next-btn {
   position: absolute;
   right: 0;
 }
@@ -789,4 +819,230 @@ li {
 .categopry-img img {
   width: 80px;
   height: 80px;
+}
+
+.see-more-product-btn {
+  display: flex;
+  margin: 36px 0 20px;
+  justify-content: center;
+}
+
+/*  */
+.advise__content {
+  background-color: var(--color-white);
+  margin-right: 20px;
+}
+
+.advise__content-body-main {
+  padding: 0 15px 0 15px;
+}
+
+.advise__content-body-main .body__main-image img {
+  width: 100%;
+}
+
+.advise__content-body-main .advise-title {
+  font-size: 16px;
+  font-weight: 900;
+  margin: 40px 0 0 30px;
+}
+
+.advise__content-body-main .advise-text {
+  font-size: 14px;
+  margin: 18px 0 0 30px;
+}
+
+.list-item {
+  display: flex;
+  padding: 12px 10px 12px 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.advise__content .list-item:first-child {
+  padding-top: 0;
+}
+
+.list-item img {
+  width: 172px;
+  height: 78px;
+}
+
+.list-item .item-text {
+  font-size: 16px;
+  width: 166px;
+}
+
+.tip-text {
+  margin: 20px 0 16px;
+}
+
+.tips__content {
+  background-color: var(--color-white);
+  padding: 0 10px;
+}
+
+.tips_body-main img {
+  width: 100%;
+  height: 326px;
+}
+
+.tips_body-list .list-item {
+  border-top: 1px solid #f1f1f1;
+}
+
+/* dich vu khach hang */
+.content__customer-service {
+  background-image: url('../img/banner-dvkh.jpg');
+  color: var(--color-white);
+  height: 432px;
+  margin-top: 24px;
+}
+
+.content__customer-service-title {
+  padding: 52px 0 32px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content__customer-service-list {
+  justify-content: space-between;
+}
+
+.customer__service-item {
+  width: 258px;
+  height: 258px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: var(--color-white);
+}
+
+.customer__service-item-icon img {
+  width: 70px;
+  height: 70px;
+}
+
+.customer__service-item-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 26px;
+}
+
+.customer__service-item-title {
+  text-align: center;
+  max-width: 160px;
+  font-size: 20px;
+  font-weight: 650;
+  margin-bottom: 17px;
+}
+
+.customer__service-item-text {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Footer */
+
+.register__news-title {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.register__news-text {
+  font-size: 16px;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
+.register__news-form {
+  height: 44px;
+  width: 590px;
+  margin-top: 20px;
+}
+
+.register__news-form input {
+  width: 100%;
+  border-radius: 44px;
+  height: 44px;
+  border: 1px solid #e2e1e1;
+  outline: none;
+  padding-left: 20px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+.register__news-form button {
+  display: block;
+  width: 146px;
+  height: 44px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 550;
+  border: none;
+  border-radius: 44px;
+  margin-left: 12px;
+}
+
+.footer__group {
+  justify-content: space-between;
+  padding: 40px 0 36px;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+.footer__social-title,
+.footer__copyright-title,
+.footer__group-item-title {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__group-item-text:not(:frist-child) {
+  margin-top: 10px;
+}
+
+.footer__certificate {
+  justify-content: space-between;
+  padding: 40px 0 30px;
+  border-top: 1px solid #e4e4e4;
+}
+
+.footer__copyright-title {
+  margin-bottom: 12px;
+}
+
+.footer__copyright-text {
+  margin-top: 8px;
+}
+
+.footer__social-icon-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #3b5998;
+  color: var(--color-white);
+  margin-right: 14px;
+}
+
+.youtube {
+  background-color: #d42428;
+}
+
+.twitter {
+  background-color: #55acee;
+}
+
+.instagram {
+  background-image: linear-gradient(#4a169c, #d23067, #fdfd23);
+}
+.footer__certify-bct {
+  margin-right: 30px;
 }
