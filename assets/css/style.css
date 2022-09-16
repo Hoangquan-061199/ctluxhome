@@ -1106,8 +1106,8 @@ li {
   margin-top: 22px;
 }
 
-.btn-submit,
-.btn-submit button {
+.btn-submit-login,
+.btn-submit-login button {
   width: 100%;
   margin-left: 0;
 }
