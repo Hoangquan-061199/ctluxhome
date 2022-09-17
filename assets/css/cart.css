@@ -12,3 +12,167 @@
 .news__guide-text.active {
   color: var(--color-primary);
 }
+
+/* buy cart */
+.cart__header {
+  font-size: 20px;
+  font-weight: 800;
+  margin: 12px 0;
+}
+
+.cart__block {
+  flex: 1;
+  margin-right: 26px;
+}
+
+.table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-container {
+  display: flex;
+  height: 100%;
+}
+
+.table-container .col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-container .col:first-child {
+  flex: 2.5;
+}
+
+.table-header {
+  height: 48px;
+  background-color: #fafafa;
+  margin-bottom: 8px;
+}
+
+.table-body {
+  height: 150px;
+}
+
+.table-body .col img {
+  width: 65px;
+  height: 65px;
+  margin-right: 40px;
+}
+
+.delete-product {
+  margin-left: 30px;
+}
+
+.table-item {
+  border: 1px solid var(--color-border-line);
+}
+
+.table-item input {
+  width: 96px;
+  height: 48px;
+  outline: none;
+  border: 1px solid var(--color-border);
+  text-align: center;
+  overflow: visible;
+}
+
+.unit {
+  text-decoration: underline;
+}
+
+.cart__gift {
+  margin: 8px 0 38px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.cart__gift-icon {
+  margin-right: 12px;
+}
+
+.cart__gift-title {
+  margin-right: 20px;
+}
+
+.cart__gift-btn {
+  height: 39px;
+  width: 139px;
+  border: 1px solid var(--color-border);
+}
+
+.cart__gift-btn button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-color: var(--color-white);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cart__idea {
+  margin-bottom: 60px;
+}
+
+.cart__idea-title {
+  margin-bottom: 12px;
+}
+
+.cart__idea textarea {
+  width: 620px;
+  height: 98px;
+  border: 1px solid var(--color-border-line);
+}
+
+.buy__cart {
+  width: 344px;
+}
+
+.cart__block-buy-title {
+  font-size: 16px;
+  font-weight: 700;
+  height: 46px;
+  line-height: 46px;
+  border-bottom: 3px solid #333;
+}
+
+.buy__cart-item {
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+  border-bottom: 1px solid var(--color-border-line);
+}
+
+.buy__cart-item .num-price {
+  font-weight: bold;
+}
+
+.terms__condition {
+  margin: 22px 0 24px;
+}
+
+.btn__buy-cart,
+.btn__continue-shoping {
+  width: 100%;
+}
+
+.btn__buy-cart button {
+  width: 100%;
+  margin-left: 0;
+}
+
+.btn__continue-shoping {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.btn__continue-shoping button {
+  width: 100%;
+}
