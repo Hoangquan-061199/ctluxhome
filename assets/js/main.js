@@ -1,17 +1,15 @@
 // ! lọc sản phẩm theo giá bằng cách kéo input range
-
-const rangeInput = document.querySelectorAll('.range__input input'),
-  progress = document.querySelector('item__category-slider .slider__progress');
-
-rangeInput.forEach((input) => {
-  input.addEventListener('input', () => {
-    let minVal = parseInt(rangeInput[0].value),
-      maxVal = parseInt(rangeInput[1].value);
-    // console.log(minVal, maxVal);
-
-    let precent = (minVal / rangeInput[0].max) * 100;
-    // console.log(precent);
-
-    progress.style.left = (minVal / rangeInput[0].max) * 100 + 'px';
+$(function () {
+  $('#slider-range').slider({
+    range: true,
+    min: 2700000,
+    max: 35500000,
+    values: [2700000, 35500000],
+    slide: function (event, ui) {
+      $('#amount-min').val(ui.values[0]);
+      $('#amount-max').val(ui.values[1]);
+    },
   });
+  $('#amount-min').val($('#slider-range').slider('values', 0));
+  $('#amount-max').val($('#slider-range').slider('values', 1));
 });

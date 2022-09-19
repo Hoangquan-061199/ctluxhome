@@ -69,8 +69,6 @@
   border: none;
   height: 28px;
   outline: none;
-  display: flex;
-  justify-content: flex-end;
 }
 
 .item__price-input .separator {
@@ -88,43 +86,22 @@
   font-weight: 400;
 }
 
-.item__category-slider {
+/* !slider price ui */
+div#slider-range {
+  border: none;
+  background: #e7e7e7;
   height: 5px;
-  border-radius: 5px;
-  background-color: #ddd;
-  position: relative;
 }
 
-.item__category-slider .slider__progress {
-  height: 5px;
-  border-radius: 5px;
-  position: absolute;
-  left: 25%;
-  right: 25px;
-  background-color: #323232;
-}
-
-.range__input {
-  position: relative;
-}
-
-.range__input input {
-  position: absolute;
-  top: -5px;
-  height: 5px;
-  width: 100%;
-  background: none;
-  pointer-events: none;
-  -webkit-appearance: none;
-}
-
-input[type='range']::-webkit-slider-thumb {
-  height: 17px;
-  width: 17px;
-  pointer-events: auto;
-  -webkit-appearance: none;
-  background: #323232;
+span.ui-slider-handle.ui-corner-all.ui-state-default {
   border-radius: 50%;
+  background-color: #000;
+  border: none;
+  top: -7px;
+}
+
+.ui-slider-range.ui-corner-all.ui-widget-header {
+  background-color: #000;
 }
 /* List product  */
 .product__block-lists-body {

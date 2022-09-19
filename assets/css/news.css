@@ -1,20 +1,4 @@
-.content__news {
-  margin-top: 52px;
-  background-color: var(--color-white);
-}
-
-.content__news-guide {
-  padding: 28px 0 calc(32px - 24px);
-  font-size: 16px;
-  color: var(--color-text);
-}
-
-.news__guide-text.active {
-  color: var(--color-primary);
-}
-
 /* main news */
-
 .news__body-main {
   flex: 1;
   margin-right: 32px;

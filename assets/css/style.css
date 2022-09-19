@@ -260,6 +260,24 @@ input[type='number']::-webkit-outer-spin-button {
   margin-left: 9px;
 }
 
+/* page guide */
+.content__news,
+.content__productdetails {
+  margin-top: 52px;
+  background-color: var(--color-white);
+}
+
+.content__news-guide,
+.content__guide {
+  padding: 28px 0 calc(32px - 24px);
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.news__guide-text.active {
+  color: var(--color-primary);
+}
+
 /* !Content */
 
 .content {

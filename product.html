@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/product.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -106,22 +109,16 @@
                     </div>
                     <div class="product__category-item">
                         <div class="item-title"><span> - </span>GIÁ</div>
-                        <div class="item__category-slider">
-                            <div class="slider__progress"></div>
-                        </div>
-                        <div class="range__input">
-                            <input type="range" class="range__min" min="0" max="10000" value="0">
-                            <input type="range" class="range__max" min="0" max="10000" value="0">
-                        </div>
+                        <div id="slider-range"></div>
                         <div class="item__price-input d-flex">
                             <div class="field d-flex">
                                 <span>đ</span>
-                                <input type="number" class="input-min" value="0" />
+                                <input type="text" id="amount-min" class="input-min" readonly>
                             </div>
                             <div class="separator">to</div>
                             <div class="field d-flex">
                                 <span>đ</span>
-                                <input type="number" class="input-max" value="0" />
+                                <input type="text" id="amount-max" class="input-max" readonly>
                             </div>
                         </div>
                         <div class="item-btn-apply"><button>ÁP DỤNG</button></div>
