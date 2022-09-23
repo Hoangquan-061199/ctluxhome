@@ -732,3 +732,30 @@
   font-size: 14px;
   margin: 40px 0 14px;
 }
+
+/* discussion product */
+.discussion__product-comment-title {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.discussion__product-comment-title h2 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.comment__user-action-item.satisfied,
+.comment__user-action-item.unsatisfied,
+.comment__user-name .admin {
+  /* display: none; */
+}
+
+.comment__user-item {
+  display: flex;
+}
+
+.comment__user-img {
+  width: 25px;
+  height: 25px;
+}
