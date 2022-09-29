@@ -143,6 +143,17 @@ $('.footer__group-item-title .icon-down').click(function () {
   $(this).parent().next('.text-group').toggle('slow');
 });
 
+//! scroll show menu navbar
+$(window).scroll(() => {
+  var headerHeight = $('.header').height() + $('.navbar').height();
+
+  if ($(this).scrollTop() >= headerHeight) {
+    $('.navbar').addClass('fixed');
+  } else {
+    $('.navbar').removeClass('fixed');
+  }
+});
+
 // ! library owl-carousel
 $('.slide-content').owlCarousel({
   autoplay: true,
