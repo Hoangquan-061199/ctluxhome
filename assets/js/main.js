@@ -154,6 +154,18 @@ $(window).scroll(() => {
   }
 });
 
+//! toggle list content for news details
+$('.header-icon-toggle').click(function () {
+  $(this).parent().next('.contents__news-item').toggle('slow');
+});
+
+//! toggle list content small for news details
+$('.item-title-icon').click(function () {
+  console.log($(this).next().children('.nav'));
+
+  $(this).next().children('.nav').toggle('slow');
+});
+
 //! show search navbar
 $('.navbar__search-icon').click(() => {
   if ($('.navbar__search-input').hasClass('active')) {
@@ -324,7 +336,7 @@ $('.customer__service-list').owlCarousel({
     1000: {
       items: 4,
     },
-    1200: {
+    1400: {
       items: 5,
     },
   },

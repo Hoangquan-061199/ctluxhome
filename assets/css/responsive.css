@@ -365,6 +365,14 @@
     margin-top: 20px;
   }
 
+  .main__item-body-action {
+    display: flex;
+  }
+
+  .news__details-cmt {
+    margin-left: 0;
+  }
+
   .footer {
     margin-bottom: 46px;
   }
@@ -503,12 +511,21 @@
     margin-right: 0;
   }
 
+  .social__text,
   .content__category-product .title-view-all-text {
     display: none;
   }
 
   .content__product-offer .product__lists {
     grid-template-columns: repeat(2, 50%);
+  }
+
+  .content__social-item {
+    width: 36px;
+  }
+
+  .content__social-item .sociak__icon {
+    margin-right: 0;
   }
 
   .footer__register-news {

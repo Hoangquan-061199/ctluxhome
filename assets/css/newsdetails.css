@@ -2,14 +2,29 @@
   background-color: var(--color-white);
 }
 
+.main__item:hover .main__item-img {
+  transform: none;
+}
+
+.main__item-body {
+  height: auto;
+}
+
 .main__item-body-title {
   font-size: 26px;
   font-weight: 800;
   margin-bottom: 18px;
 }
 
+.main__item-body-title:hover {
+  color: #333;
+}
+
 .main__item-body-action .action-item:not(:first-child) {
   border: none;
+}
+.main__item-author.news__details-author.action-item {
+  display: flex;
 }
 
 .author__item-text .user {
@@ -44,6 +59,14 @@
   font-size: 18px;
   font-weight: 800;
   margin-left: 10px;
+}
+
+.contents__news-item {
+  display: none;
+}
+
+.contents__news-item.active {
+  display: block;
 }
 
 .contents__news-item .item-title.active .item-title-icon {
@@ -93,6 +116,7 @@
 
 .content__news-text-body {
   margin-bottom: 50px;
+  text-align: justify;
 }
 
 /* social item */
