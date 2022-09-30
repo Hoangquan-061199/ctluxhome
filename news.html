@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tin Tức</title>
+    <title>News</title>
     <meta name="description"
         content="CT Luxhome Showroom thiết bị nhà bếp nhập khẩu, đồ gia dụng cao cấp chính hãng uy tín, chất lượng hàng đầu Việt Nam.">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon_ctluxhome.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/news.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -28,10 +30,11 @@
                 <div class="header__hotline-title">Hotline Liên hệ 24/7</div>
                 <div class="header__hotline-number">08.1810.1800</div>
             </div>
-            <div class="header__search">
+            <form class="header__search">
                 <input class="header__search-input" type="text" placeholder="Nhập từ khóa tìm kiếm">
-                <span class="header__search-icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
-            </div>
+                <button type="submit" class="header__search-icon"><i
+                        class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            </form>
             <div class="header__action">
                 <div class="header__action-user">
                     <a href="#">
@@ -50,8 +53,12 @@
             </div>
         </div>
     </header>
+
     <navbar class="navbar">
         <div class="container">
+            <div class="navbar__logo">
+                <img src="./assets/img/logo-mb.png" alt="">
+            </div>
             <div class="navbar__category">
                 <div class="navbar__category-icon">
                     <img src="./assets/img/icon_danhmuc.jpg" alt="category">
@@ -60,18 +67,555 @@
                     Danh mục
                     <span class="icon-down"><i class="fa-solid fa-chevron-down"></i></span>
                 </div>
+                <ul class="category__list-small">
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/cooker.png" alt="bep">
+                            </span>
+                            <span class="category__list-text-menu-small">Bếp</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>BẾP</h2>
+                                    <li><a href="">Bếp bosch</a></li>
+                                    <li><a href="">Bếp bosch</a></li>
+                                    <li><a href="">Bếp bosch</a></li>
+                                    <li><a href="">Bếp bosch</a></li>
+                                    <li><a href="">Bếp bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/dishwasher.png" alt="mayruabat">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy rửa bát</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY RỬA BÁT</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/oven.png" alt="lonuong-lovisong">
+                            </span>
+                            <span class="category__list-text-menu-small">Lò nướng, Lò vi sóng</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>LÒ</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/air-purifier.png" alt="maylockhongkhi">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy lọc không khí</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY LỌC KHÔNG KHÍ</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/washing-machine.png" alt="maygiat">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy giặt, Máy sấy</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY GIẶT</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h2>MÁY SẤY</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h2>PHỤ KIỆN MÁY GIẶT</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/vacuum-cleaner.png" alt="mayhutbui-robothutbui">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy hút bụi, Robot hút bụi</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY HÚT BỤI</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h2>ROBOT HÚT BỤI</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/extractor.png" alt="">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy hút mùi</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY HÚT MÙI</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/mixer.png" alt="thietbigiadungnho">
+                            </span>
+                            <span class="category__list-text-menu-small">Thiết bị gia dụng nhỏ</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>THIẾT BỊ GIA DỤNG NHỎ</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/refrigerator.png" alt="tulanh-turuou">
+                            </span>
+                            <span class="category__list-text-menu-small">Tủ lạnh, Tủ rượu</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>TỦ LẠNH</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul>
+                                    <h2>TỦ RƯỢU</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/tablet.png" alt="chattayrua">
+                            </span>
+                            <span class="category__list-text-menu-small">Chất tẩy rửa</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>CHẤT TẨY RỬA</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/sink.png" alt="chauvoiruabat">
+                            </span>
+                            <span class="category__list-text-menu-small">Chậu vòi rửa bát</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>CHẬU VÒI RỬA BÁT</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/pressure-cooker.png" alt="dungcunauan">
+                            </span>
+                            <span class="category__list-text-menu-small">Dụng cụ nấu ăn</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>DỤNG CỤ NẤU ĂN</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/water-filter.png" alt="maylocnuoc">
+                            </span>
+                            <span class="category__list-text-menu-small">Máy lọc nước</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>MÁY LỌC NƯỚC</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="category__list-small-item item__menu-mobile">
+                        <a href="">
+                            <span class="item__icon">
+                                <img src="./assets/img/digital-door.png" alt="khoadientu">
+                            </span>
+                            <span class="category__list-text-menu-small">Khóa điện từ</span>
+                        </a>
+                        <div class="item__icon-down">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+                            </svg>
+                        </div>
+                        <ul class="small__item-list">
+                            <li class="small__item-list-header">
+                                <span>
+                                    <span class="icon__back-menu"><i class="fa-solid fa-arrow-left-long"></i></span>
+                                    <span>Quay lại</span>
+                                </span>
+                            </li>
+
+                            <li>
+                                <ul>
+                                    <h2>KHÓA ĐIỆN TỪ</h2>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                    <li><a href="">máy rửa bát bosch</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
             <div class="navbar__list">
                 <ul>
-                    <li class="navbar__list-item"><a href="#">Trang chủ</a></li>
-                    <li class="navbar__list-item"><a href="#">Giới thiệu</a></li>
-                    <li class="navbar__list-item"><a href="#">Bản tin</a></li>
-                    <li class="navbar__list-item"><a href="#">Góc tư vấn</a></li>
-                    <li class="navbar__list-item"><a href="#">Quy định & Chính sách</a></li>
-                    <li class="navbar__list-item"><a href="#">Liên hệ</a></li>
+                    <li class="navbar__list-item item__menu-mobile mb-none"><a href="#">Trang chủ</a></li>
+                    <li class="navbar__list-item item__menu-mobile"><a href="#">Giới thiệu</a></li>
+                    <li class="navbar__list-item item__menu-mobile"><a href="#">Bản tin</a></li>
+                    <li class="navbar__list-item item__menu-mobile"><a href="#">Góc tư vấn</a></li>
+                    <li class="navbar__list-item item__menu-mobile">
+                        <a href="#">Quy định & Chính sách</a>
+                        <ul class="navbar__list-item-menu-small">
+                            <li>
+                                <a href="">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách vận chuyển và lắp đặt</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách đổi trả, hoàn tiền và bảo hành</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách bảo mật thông tin</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__list-item item__menu-mobile"><a href="#">Liên hệ</a></li>
                 </ul>
             </div>
-            <div class="navbar__language">
+            <div class="navbar__language item__menu-mobile mb-none">
                 <div class="navbar__language-icon">
                     <img src="./assets/img/icon_vi.png" alt="icon-vietnam">
                 </div>
@@ -79,12 +623,65 @@
                     Tiếng việt
                     <span class="icon-down"><i class="fa-solid fa-chevron-down"></i></span>
                 </div>
-
             </div>
+            <div class="navbar__search-icon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <form class="navbar__search-input" action="">
+                <input type="text" autofocus placeholder="Bạn muốn tìm gì?">
+            </form>
+            <div class="navbar__cart-icon header__action-cart">
+                <div class="cart-icon">
+                    <a href="#"><img src="./assets/img/cart-2.png" alt="cart"></a>
+                </div>
+                <span class="cart-num">0</span>
+            </div>
+
+            <div class="login__item-mobile">Đăng nhập</div>
         </div>
     </navbar>
 
-    <section class="content__news">
+    <div class="menu__mobile">
+        <div class="block">
+            <div class="menu__mobile-icon">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="menu__mobile-logo">
+                <img src="./assets/img/logo-mb.png" alt="">
+            </div>
+            <div class="menu__mobile-cart">
+                <div class="header__action-cart">
+                    <div class="cart-icon">
+                        <a href="#"><img src="./assets/img/cart-2.png" alt="cart"></a>
+                    </div>
+                    <span class="cart-num">0</span>
+                </div>
+            </div>
+        </div>
+        <div class="menu__mobile-search">
+            <div class="header__search">
+                <input class="header__search-input" type="text" placeholder="Bạn muốn tìm gì?">
+                <span class="header__search-icon"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu__mobile-icon-fix">
+        <a class="icon__fix-item">
+            <img src="./assets/img/icon_home.png" alt="home">
+        </a>
+        <a class="icon__fix-item showlogin">
+            <img src="./assets/img/icon_user.png" alt="user">
+        </a>
+        <a class="icon__fix-item">
+            <img src="./assets/img/icon_phone.png" alt="phone">
+        </a>
+        <a class="icon__fix-item backscrolltop">
+            <img src="./assets/img/icon_back.png" alt="backtop">
+        </a>
+    </div>
+
+    <section class="content__mb">
         <div class="content__news-guide">
             <div class="container">
                 <span class="news__guide-text">Trang chủ</span>
@@ -92,10 +689,10 @@
                 <span class="news__guide-text active">Góc tư vấn</span>
             </div>
         </div>
-        <div class="content__news-body">
-            <div class="container d-flex">
+        <div class="container">
+            <div class="content__news-body">
                 <div class="news__body-main">
-                    <div class="d-flex">
+                    <div class="group__new-first">
                         <div class="main__item">
                             <a href="">
                                 <div class="main__item-img">
@@ -183,41 +780,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -226,41 +825,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -269,41 +870,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -312,41 +915,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -355,41 +960,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -398,41 +1005,43 @@
                                 <div class="news__lists-item-img">
                                     <img src="./assets/img/banner-news.png" alt="banner-news">
                                 </div>
-                                <div class="news__lists-item-body">
-                                    <div class="item-date-action">
-                                        <div class="item-date-action d-flex">
-                                            <div class="main__item-body-date lists-item-body-date">
-                                                <span class="day">20</span>
-                                                <span class="year">10/2021</span>
-                                            </div>
-                                            <div class="main__item-body-action  news__item-action d-flex">
-                                                <div class="main__item-author action-item d-flex">
-                                                    <div class="author__item-icon action-icon"><i class="fa fa-user"
-                                                            aria-hidden="true"></i>
-                                                    </div>
-                                                    <div class="author__item-text">Admin</div>
+                                <div class="news__lists-item-group">
+                                    <div class="news__lists-item-body">
+                                        <div class="item-date-action">
+                                            <div class="item-date-action d-flex">
+                                                <div class="main__item-body-date lists-item-body-date">
+                                                    <span class="day">20</span>
+                                                    <span class="year">10/2021</span>
                                                 </div>
-                                                <div class="main__item-cmt action-item d-flex">
-                                                    <div class="cmt__item-icon action-icon">
-                                                        <i class="fa fa-comments" aria-hidden="true"></i>
+                                                <div class="main__item-body-action  news__item-action d-flex">
+                                                    <div class="main__item-author action-item d-flex">
+                                                        <div class="author__item-icon action-icon"><i class="fa fa-user"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="author__item-text">Admin</div>
                                                     </div>
-                                                    <div class="cmt_item-quantiti">0</div>
-                                                    <div class="cmt__item-text">comments</div>
-                                                </div>
-                                                <div class="main__item-view action-item d-flex">
-                                                    <div class="view__item-icon action-icon"><i class="fa fa-eye"
-                                                            aria-hidden="true"></i>
+                                                    <div class="main__item-cmt action-item d-flex">
+                                                        <div class="cmt__item-icon action-icon">
+                                                            <i class="fa fa-comments" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="cmt_item-quantiti">0</div>
+                                                        <div class="cmt__item-text">comments</div>
                                                     </div>
-                                                    <div class="view__item-quantiti">90</div>
+                                                    <div class="main__item-view action-item d-flex">
+                                                        <div class="view__item-icon action-icon"><i class="fa fa-eye"
+                                                                aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="view__item-quantiti">90</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="news__lists-item-title">
-                                    TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
-                                    thị
-                                    trường
+                                    <div class="news__lists-item-title">
+                                        TOP 5 máy rửa bát Bosch 3 tầng HOT nhất trên
+                                        thị
+                                        trường
+                                    </div>
                                 </div>
                             </a>
                         </li>
@@ -571,30 +1180,15 @@
                             </div>
                         </div>
                         <div class="promotion__silde">
-                            <div class="promotion__silde-content">
-                                <div class="silde__content-view">
-                                    <div class="slide-item active">
-                                        <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
-                                    </div>
-                                    <div class="slide-item">
-                                        <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
-                                    </div>
+                            <div class="promotion__silde-content owl-carousel owl-theme ">
+                                <div class="slide-item item">
+                                    <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
                                 </div>
-                                <div class="slide-btn">
-                                    <span class="dot active"></span>
-                                    <span class="dot"></span>
-                                    <span class="dot"></span>
+                                <div class="slide-item item">
+                                    <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
                                 </div>
-                                <div class="slide-prev-next">
-                                    <div class="slide-prev">
-                                        <i class="fa-solid fa-angle-left"></i>
-                                    </div>
-                                    <div class="slide-next">
-                                        <i class="fa-solid fa-angle-right"></i>
-                                    </div>
+                                <div class="slide-item item">
+                                    <img src="./assets/img/banner-khuyen-mai.jpg" alt="slide1">
                                 </div>
                             </div>
                         </div>
@@ -602,7 +1196,6 @@
                 </div>
             </div>
         </div>
-
     </section>
 
 
@@ -612,50 +1205,50 @@
                 <div class="customer__service-title">
                     Dịch vụ khách hàng
                 </div>
-                <div class="customer__service-list d-flex">
-                    <div class="customer__service-item">
+                <div class="customer__service-list owl-carousel owl-theme">
+                    <div class="customer__service-item item">
                         <a href="#">
                             <div class="customer__service-item-icon">
-                                <img src="./assets/img/icon-doi-tra.png" alt="">
+                                <img src="./assets/img/doi-hang-hoa.svg" alt="">
                             </div>
-                            <div class="customer__service-item-title">Quy định đổi trả sản phẩm</div>
-                            <div class="customer__service-item-text">Xem chi tiết</div>
+                            <div class="customer__service-item-title">Quy trình<br />Đổi trả sản phẩm</div>
+                            <a class="customer__service-item-text">Xem chi tiết</a>
                         </a>
                     </div>
-                    <div class="customer__service-item">
+                    <div class="customer__service-item item">
                         <a href="#">
                             <div class="customer__service-item-icon">
-                                <img src="./assets/img/icon-doi-tra.png" alt="">
+                                <img src="./assets/img/chung-nhan.svg" alt="">
                             </div>
-                            <div class="customer__service-item-title">Quy định đổi trả sản phẩm</div>
-                            <div class="customer__service-item-text">Xem chi tiết</div>
+                            <div class="customer__service-item-title">Chính sách<br />Bảo hành sản phẩm</div>
+                            <a class="customer__service-item-text">Xem chi tiết</a>
                         </a>
                     </div>
-                    <div class="customer__service-item">
+                    <div class="customer__service-item item">
                         <a href="#">
                             <div class="customer__service-item-icon">
-                                <img src="./assets/img/icon-doi-tra.png" alt="">
+                                <img src="./assets/img/giao-nhan-hang.svg" alt="">
                             </div>
-                            <div class="customer__service-item-title">Quy định đổi trả sản phẩm</div>
-                            <div class="customer__service-item-text">Xem chi tiết</div>
+                            <div class="customer__service-item-title">Chính sách<br />Vận chuyển & Lắp đặt</div>
+                            <a class="customer__service-item-text">Xem chi tiết</a>
                         </a>
                     </div>
-                    <div class="customer__service-item">
+                    <div class="customer__service-item item">
                         <a href="#">
                             <div class="customer__service-item-icon">
-                                <img src="./assets/img/icon-doi-tra.png" alt="">
+                                <img src="./assets/img/goi-qua.svg" alt="">
                             </div>
-                            <div class="customer__service-item-title">Quy định đổi trả sản phẩm</div>
-                            <div class="customer__service-item-text">Xem chi tiết</div>
+                            <div class="customer__service-item-title">Ưu đãi <br />Quà tặng miễn phí</div>
+                            <a class="customer__service-item-text">Xem chi tiết</a>
                         </a>
                     </div>
-                    <div class="customer__service-item">
+                    <div class="customer__service-item item">
                         <a href="#">
                             <div class="customer__service-item-icon">
-                                <img src="./assets/img/icon-doi-tra.png" alt="">
+                                <img src="./assets/img/tu-van-vien.svg" alt="">
                             </div>
-                            <div class="customer__service-item-title">Quy định đổi trả sản phẩm</div>
-                            <div class="customer__service-item-text">Xem chi tiết</div>
+                            <div class="customer__service-item-title">Tư vấn<br />Hỗ trợ 24/7</div>
+                            <a class="customer__service-item-text">Xem chi tiết</a>
                         </a>
                     </div>
                 </div>
@@ -669,48 +1262,73 @@
                 <div class="register__news-text">
                     Nhận thông tin cập nhật mới nhất về sản phẩm mới và đợt giảm giá sắp tới
                 </div>
-                <div class="register__news-form">
+                <form class="register__news-form">
                     <div class="d-flex">
                         <input type="text" placeholder="Nhập email của bạn">
                         <button>Gửi đi</button>
                     </div>
-                </div>
+                </form>
             </div>
             <div class="footer__group d-flex">
                 <div class="footer__group-item">
-                    <div class="footer__group-item-title">Giới thiệu chung</div>
-                    <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
-                    <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
-                    <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
-                    <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    <div class="footer__group-item-title">
+                        <span>Giới thiệu chung</span>
+                        <span class="icon-down"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-group">
+                        <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
+                        <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
+                        <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
+                        <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    </div>
                 </div>
                 <div class="footer__group-item">
-                    <div class="footer__group-item-title">Giới thiệu chung</div>
-                    <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
-                    <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
-                    <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
-                    <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    <div class="footer__group-item-title">
+                        <span>Hỗ trợ khách hàng</span>
+                        <span class="icon-down"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-group">
+                        <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
+                        <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
+                        <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
+                        <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    </div>
                 </div>
                 <div class="footer__group-item">
-                    <div class="footer__group-item-title">Giới thiệu chung</div>
-                    <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
-                    <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
-                    <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
-                    <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    <div class="footer__group-item-title">
+                        <span>Chính sách công ty</span>
+                        <span class="icon-down"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-group">
+                        <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
+                        <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
+                        <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
+                        <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    </div>
                 </div>
                 <div class="footer__group-item">
-                    <div class="footer__group-item-title">Giới thiệu chung</div>
-                    <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
-                    <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
-                    <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
-                    <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    <div class="footer__group-item-title">
+                        <span>Mua hàng & Thanh toán</span>
+                        <span class="icon-down"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-group">
+                        <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
+                        <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
+                        <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
+                        <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    </div>
                 </div>
                 <div class="footer__group-item">
-                    <div class="footer__group-item-title">Giới thiệu chung</div>
-                    <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
-                    <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
-                    <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
-                    <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    <div class="footer__group-item-title">
+                        <span>Dịch vụ khác</span>
+                        <span class="icon-down"><i class="fa-solid fa-angle-down"></i></span>
+                    </div>
+                    <div class="text-group">
+                        <div class="footer__group-item-text"><a href="">Về công ty chúng tôi</a></div>
+                        <div class="footer__group-item-text"><a href="">Nội quy cửa hàng</a></div>
+                        <div class="footer__group-item-text"><a href="">Góc tư vấn</a></div>
+                        <div class="footer__group-item-text"><a href="">Bản tin công ty</a></div>
+                    </div>
                 </div>
             </div>
             <div class="footer__certificate d-flex">
@@ -726,19 +1344,87 @@
                 <div class="footer__social">
                     <div class="footer__social-title">KẾT NỐI VỚI CHÚNG TÔI</div>
                     <div class="footer__social-icon d-flex">
-                        <div class="footer__social-icon-item facebook"><i class="fa-brands fa-facebook"></i></div>
-                        <div class="footer__social-icon-item youtube"><i class="fa-brands fa-youtube"></i></div>
-                        <div class="footer__social-icon-item twitter"><i class="fa-brands fa-twitter"></i></div>
-                        <div class="footer__social-icon-item instagram"><i class="fa-brands fa-instagram"></i></div>
+                        <a class="footer__social-icon-item facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="footer__social-icon-item youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a class="footer__social-icon-item twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="footer__social-icon-item instagram"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="footer__certify d-flex">
-                    <div class="footer__certify-bct"><img src="./assets/img/bct.png" alt=""></div>
-                    <div class="footer__certify-dmca"><img src="./assets/img/dmca.png" alt=""></div>
+                    <a class="footer__certify-bct"><img src="./assets/img/bct.png" alt=""></a>
+                    <a class="footer__certify-dmca"><img src="./assets/img/dmca.png" alt=""></a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- ! default display none -->
+    <div class="login">
+        <div class="login__header">
+            <h2 class="login__title">
+                <span>ĐĂNG NHẬP</span>
+                <span class="icon-exit"><i class="fa-solid fa-xmark"></i></span>
+            </h2>
+            <div class="login__text">Nếu bạn đã đăng ký, xin vui lòng đăng nhập</div>
+        </div>
+        <form action="" class="login-form">
+            <div class="login-form-item">
+                <label for="">Địa chỉ email</label>
+                <input type="text" placeholder="Nhập email của bạn">
+            </div>
+            <div class="login-form-item">
+                <label for="">Mật khẩu</label>
+                <input type="password" placeholder="Nhập mật khẩu của bạn">
+            </div>
+            <div class="btn-submit-login register__news-form">
+                <button type="submit">Đăng nhập</button>
+            </div>
+            <div class="forget__pass"><a href="">Quên mật khẩu</a></div>
+        </form>
+        <div class="btn-register">
+            <span>Tạo tài khoản của bạn và tận hưởng trải nghiệm mua sắm mới.</span>
+            <div class="button-register">
+                <button class="add-cart-btn">Tạo tài khoản</button>
+            </div>
+        </div>
+    </div>
+    <!-- !default display none -->
+    <div class="overlay"></div>
+
+    <!-- Messenger Plugin chat Code -->
+    <!-- <div id="fb-root"></div> -->
+
+    <!-- Your Plugin chat code -->
+    <!-- <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "110011035207941");
+        chatbox.setAttribute("attribution", "biz_inbox");
+    </script> -->
+
+    <!-- Your SDK code -->
+    <!-- <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v15.0'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script> -->
+
+    <script src="owlcarousel/jquery.min.js"></script>
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

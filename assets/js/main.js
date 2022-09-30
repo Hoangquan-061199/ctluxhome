@@ -154,6 +154,15 @@ $(window).scroll(() => {
   }
 });
 
+//! show search navbar
+$('.navbar__search-icon').click(() => {
+  if ($('.navbar__search-input').hasClass('active')) {
+    $('.navbar__search-input').removeClass('active');
+  } else {
+    $('.navbar__search-input').addClass('active');
+  }
+});
+
 // ! library owl-carousel
 $('.slide-content').owlCarousel({
   autoplay: true,
@@ -320,4 +329,13 @@ $('.customer__service-list').owlCarousel({
     },
   },
   dots: false,
+});
+
+$('.promotion__silde-content').owlCarousel({
+  autoplay: false,
+  loop: true,
+  margin: 0,
+  nav: true,
+  items: 1,
+  dots: true,
 });
