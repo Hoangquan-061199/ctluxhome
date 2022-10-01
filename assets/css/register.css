@@ -42,6 +42,10 @@
   font-weight: bold;
 }
 
+.form-register-item input {
+  padding-left: 10px;
+}
+
 .btn-submit {
   padding: 32px 0 64px;
 }

@@ -417,3 +417,26 @@ $('.slider-product-details').owlCarousel({
   },
   dots: false,
 });
+
+$('#form-2').validate({
+  rules: {
+    email: {
+      required: true,
+      email: true,
+    },
+    password: {
+      required: true,
+      minlength: 8,
+    },
+  },
+  messages: {
+    email: {
+      required: 'Vui lòng nhập email của bạn',
+      email: 'Vui lòng nhập đúng định dạng của email',
+    },
+    password: {
+      required: 'Vui lòng nhập mật khẩu của bạn',
+      minlength: 'Hãy nhập ít nhất 8 ký tự',
+    },
+  },
+});
