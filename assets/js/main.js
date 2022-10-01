@@ -377,7 +377,11 @@ $('.product__description-slide').owlCarousel({
   loop: true,
   margin: 0,
   nav: false,
-  items: 1,
+  responsive: {
+    0: {
+      items: 1,
+    },
+  },
   dots: true,
 });
 
@@ -396,6 +400,19 @@ $('.products__similar .product__lists').owlCarousel({
     },
     1000: {
       items: 5,
+    },
+  },
+  dots: false,
+});
+
+$('.slider-product-details').owlCarousel({
+  autoplay: true,
+  loop: true,
+  margin: 10,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1,
     },
   },
   dots: false,

@@ -393,6 +393,18 @@
     display: none;
   }
 
+  .content__specialoffers {
+    display: none;
+  }
+
+  .content__productdetails-body {
+    grid-template-columns: auto;
+  }
+
+  .content__descproduct {
+    grid-template-columns: auto;
+  }
+
   .footer {
     margin-bottom: 46px;
   }
@@ -637,6 +649,42 @@
 
   .product__category-item.item-price .item-title {
     border-top: none;
+  }
+
+  .content__productdetails-block {
+    grid-template-columns: repeat(1, 100%);
+  }
+
+  .register__number-support {
+    width: 100%;
+  }
+
+  .content__descproduct {
+    grid-template-columns: auto;
+  }
+
+  .product__assess-body {
+    grid-template-columns: auto;
+  }
+
+  .block-standard {
+    padding: 15px 0;
+    border-left: none;
+  }
+
+  .line-star.acitve,
+  .line-star {
+    width: 100%;
+  }
+
+  .lv-star {
+    display: flex;
+    align-items: center;
+  }
+
+  .comment__client-title {
+    display: flex;
+    align-items: center;
   }
 }
 
