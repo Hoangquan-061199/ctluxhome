@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -24,7 +25,7 @@
     <header class="header">
         <div class="container">
             <div class="header__logo">
-                <a href="#"><img src="./assets/img/logo.png" alt="logo"></a>
+                <a href="http://127.0.0.1:5500/"><img src="./assets/img/logo.png" alt="logo"></a>
             </div>
             <div class="header__hotline">
                 <div class="header__hotline-title">Hotline Liên hệ 24/7</div>
@@ -646,9 +647,9 @@
             <div class="menu__mobile-icon">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="menu__mobile-logo">
+            <a href="http://127.0.0.1:5500/" class="menu__mobile-logo">
                 <img src="./assets/img/logo-mb.png" alt="">
-            </div>
+            </a>
             <div class="menu__mobile-cart">
                 <div class="header__action-cart">
                     <div class="cart-icon">
@@ -690,8 +691,8 @@
         </div>
         <div class="content__news-guide">
             <div class="container">
-                <span class="news__guide-text">Trang chủ</span>
-                <span class="news__guide-text">/</span>
+                <a href="" class="news__guide-text">Trang chủ</a>
+                <a href="" class="news__guide-text">/</a>
                 <span class="news__guide-text active">Góc tư vấn</span>
             </div>
         </div>
@@ -699,25 +700,25 @@
             <div class="content__product-wrapper">
                 <div class="content__product-catergory">
                     <div class="product__category-item item-product-title">
-                        <div class="item-title">MÁY RỬA BÁT</div>
-                        <div class="item-text">Máy rửa bát âm tủ BOSCH</div>
-                        <div class="item-text">Máy rửa bát bán âm tủ BOSCH</div>
-                        <div class="item-text">Máy rửa bát độc lập BOSCH</div>
-                        <div class="item-text">Phụ kiện máy rửa bát</div>
+                        <a href="" class="item-title">MÁY RỬA BÁT</a>
+                        <a href="" class="item-text">Máy rửa bát âm tủ BOSCH</a>
+                        <a href="" class="item-text">Máy rửa bát bán âm tủ BOSCH</a>
+                        <a href="" class="item-text">Máy rửa bát độc lập BOSCH</a>
+                        <a href="" class="item-text">Phụ kiện máy rửa bát</a>
                     </div>
                     <div class="close-filter"></div>
                     <div class="product__category-item item-price">
                         <div class="item-title"><span> - </span>GIÁ</div>
-                        <div id="slider-range"></div>
+                        <input type="text" class="js-range-slider" name="my_range" value="" />
                         <div class="item__price-input d-flex">
                             <div class="field d-flex">
                                 <span>đ</span>
-                                <input type="text" id="amount-min" class="input-min" readonly>
+                                <span class="price-from"></span>
                             </div>
                             <div class="separator">to</div>
                             <div class="field d-flex">
                                 <span>đ</span>
-                                <input type="text" id="amount-max" class="input-max" readonly>
+                                <span class="price-to"></span>
                             </div>
                         </div>
                         <div class="item-btn-apply add-cart-btn">ÁP DỤNG</div>
@@ -725,35 +726,39 @@
                     <div class="product__category-item">
                         <div class="item-title"><span> - </span>THƯƠNG HIỆU</div>
                         <div class="item-text">
-                            <span>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="thuonghieu" id="bosch">
+                            <label for="bosch">
+                                <span class="check-box"></span>
                                 <span>Bosch</span>
-                            </span>
-                            <span class="quantiti">12</span>
+                            </label>
+                            <span class="quantiti">(12)</span>
                         </div>
                         <div class="item-text">
-                            <span>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="thuonghieu" id="electrolux">
+                            <label for="electrolux">
+                                <span class="check-box"></span>
                                 <span>Electrolux</span>
-                            </span>
-                            <span class="quantiti">8</span>
+                            </label>
+                            <span class="quantiti">(8)</span>
                         </div>
                     </div>
                     <div class="product__category-item">
                         <div class="item-title"><span> - </span>XUẤT XỨ</div>
                         <div class="item-text">
-                            <span>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="xuatxu" id="duc">
+                            <label for="duc">
+                                <span class="check-box"></span>
                                 <span>Đức</span>
-                            </span>
-                            <span class="quantiti">12</span>
+                            </label>
+                            <span class="quantiti">(12)</span>
                         </div>
                         <div class="item-text">
-                            <span>
-                                <input type="checkbox" name="" id="">
+                            <input type="checkbox" name="xuatxu" id="vietnam">
+                            <label for="vietnam">
+                                <span class="check-box"></span>
                                 <span>Việt Nam</span>
-                            </span>
-                            <span class="quantiti">8</span>
+                            </label>
+                            <span class="quantiti">(8)</span>
                         </div>
                     </div>
                 </div>
@@ -810,21 +815,35 @@
                             <div class="product__filter-item d-flex">
                                 <div class="product__filter-view-title">Hiển thị</div>
                                 <div class="product__filter-view-menu">
-                                    <span>12</span>
-                                    <span><i class="fa-solid fa-angle-down"></i></span>
+                                    <select name="" id="">
+                                        <option value="12">12</option>
+                                        <option value="16">16</option>
+                                        <option value="20">20</option>
+                                        <option value="24">24</option>
+                                        <option value="28">28</option>
+                                        <option value="32">32</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="product__filter-item d-flex">
                                 <div class="product__filter-view-title">Sắp xếp</div>
                                 <div class="product__filter-view-menu">
-                                    <span>Bán chạy nhất</span>
-                                    <span><i class="fa-solid fa-angle-down"></i></span>
+                                    <select name="" id="">
+                                        <option value="Mới nhất">Mới nhất</option>
+                                        <option value="Bán chạy">Bán chạy</option>
+                                        <option value="Đang km sốc">Đang km sốc</option>
+                                        <option value="Từ thấp đến cao">Từ thấp đến cao</option>
+                                        <option value="Từ cao đến thấp">Từ cao đến thấp</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="product__filter-item d-flex">
-                                <span class="product__filter-item-grid"><img src="./assets/img/view-grid.jpg"
-                                        alt=""></span>
-                                <span><img src="./assets/img/view-list.jpg" alt=""></span>
+                                <span class="product__filter-item-grid active">
+                                    <img src="./assets/img/view-grid.jpg" alt="">
+                                </span>
+                                <span class="product__filter-item-list">
+                                    <img src="./assets/img/view-list.jpg" alt="">
+                                </span>
                             </div>
                         </div>
                         <div class="product__block-lists-body">
@@ -1348,9 +1367,9 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
         type="text/javascript"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/product.js"></script>

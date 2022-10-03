@@ -146,12 +146,14 @@ $('.footer__group-item-title .icon-down').click(function () {
 
 //! scroll show menu navbar
 $(window).scroll(() => {
-  var headerHeight = $('.header').height() + $('.navbar').height();
+  if ($(window).width() >= 992) {
+    let headerHeight = $('.header').height() + $('.navbar').height();
 
-  if ($(this).scrollTop() >= headerHeight) {
-    $('.navbar').addClass('fixed');
-  } else {
-    $('.navbar').removeClass('fixed');
+    if ($(this).scrollTop() >= headerHeight) {
+      $('.navbar').addClass('fixed');
+    } else {
+      $('.navbar').removeClass('fixed');
+    }
   }
 });
 
@@ -193,6 +195,36 @@ $('.product__block-icon-filter').click(() => {
 $('.close-filter').click(() => {
   $('.content__product-catergory').removeClass('active');
   overlayHidden();
+});
+
+$('.product__filter-item-grid').click(() => {
+  if ($(this).hasClass('active')) {
+    $('.product__filter-item-list').removeClass('active');
+  } else {
+    $('.product__filter-item-grid').addClass('active');
+    $('.product__filter-item-list').removeClass('active');
+  }
+});
+
+$('.product__filter-item-list').click(() => {
+  if ($(this).hasClass('active')) {
+    $('.product__filter-item-grid').removeClass('active');
+  } else {
+    $('.product__filter-item-list').addClass('active');
+    $('.product__filter-item-grid').removeClass('active');
+  }
+});
+
+$('.product__specifications-btn').click(() => {
+  $('.specifications__details').addClass('active');
+});
+
+$('.specifications__details-exit').click(() => {
+  $('.specifications__details').removeClass('active');
+});
+
+$('.discussion__product-block').click(() => {
+  $('.form-cmt').addClass('active');
 });
 
 // ! library owl-carousel
@@ -418,25 +450,28 @@ $('.slider-product-details').owlCarousel({
   dots: false,
 });
 
-$('#form-2').validate({
-  rules: {
-    email: {
-      required: true,
-      email: true,
-    },
-    password: {
-      required: true,
-      minlength: 8,
-    },
-  },
-  messages: {
-    email: {
-      required: 'Vui lòng nhập email của bạn',
-      email: 'Vui lòng nhập đúng định dạng của email',
-    },
-    password: {
-      required: 'Vui lòng nhập mật khẩu của bạn',
-      minlength: 'Hãy nhập ít nhất 8 ký tự',
-    },
+// $('#image-gallery').lightSlider({
+//   gallery: true,
+//   item: 1,
+//   thumbItem: 6,
+//   slideMove: 1,
+//   loop: true,
+//   onSliderLoad: function () {
+//     $('#image-gallery').removeClass('cS-hidden');
+//   },
+// });
+
+$('#imageGallery').lightSlider({
+  gallery: true,
+  item: 1,
+  loop: true,
+  thumbItem: 6,
+  slideMargin: 0,
+  enableDrag: false,
+  currentPagerPosition: 'middle',
+  onSliderLoad: function (el) {
+    el.lightGallery({
+      selector: '#imageGallery .lslide',
+    });
   },
 });

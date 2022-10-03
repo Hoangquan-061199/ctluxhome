@@ -14,6 +14,8 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./lightslider/lightslider.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/productdetails.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -679,7 +681,7 @@
         </a>
     </div>
 
-    <section class="content content__mb">
+    <section class="content content__pd">
         <div class="container">
             <div class="content__guide">
                 <span class="news__guide-text">Trang chủ</span>
@@ -693,37 +695,57 @@
             <div class="content__productdetails-body">
                 <div class="content__productdetails-block">
                     <div class="content__productdetails-block-image">
-                        <div class="slider-product-details owl-carousel owl-theme">
-                            <div class="item">
+                        <!-- <ul id="image-gallery" class="gallery list-unstyled cS-hidden">
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg">
                                 <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="item">
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg">
                                 <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="item">
+                            </li>
+                        </ul> -->
+                        <!-- <ul id="imageGallery">
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
                                 <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="item">
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
                                 <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </li>
+                            <li data-thumb="./assets/img/may-rua-bat-smi4hcs48e.jpg"
+                                data-src="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </li>
+                        </ul> -->
+                        <div class="fotorama" data-nav="thumbs">
+                            <a href="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </a>
+                            <a href="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </a>
+                            <a href="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </a>
+                            <a href="./assets/img/may-rua-bat-smi4hcs48e.jpg">
+                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
+                            </a>
                         </div>
                         <div class="icon-show-img-big d-flex">
                             <span><i class="fa-solid fa-magnifying-glass"></i></span>
                             <span>Xem ảnh lớn</span>
-                        </div>
-                        <div class="product__details-img-small f-center">
-                            <div class="product__details-img-item active">
-                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="product__details-img-item">
-                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="product__details-img-item">
-                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
-                            <div class="product__details-img-item">
-                                <img src="./assets/img/may-rua-bat-smi4hcs48e.jpg" alt="mayruabat">
-                            </div>
                         </div>
                     </div>
                     <div class="content__productdetails-block-body">
@@ -754,23 +776,25 @@
                                 Bảo hành chính hãng: 24 tháng
                             </p>
                         </div>
-                        <div class="d-flex product__buy-cart">
-                            <div class="product__details-quantiti d-flex">
+                        <div class="f-center product__buy-cart">
+                            <div class="product__details-num d-flex">
                                 <span>Số lượng:</span>
-                                <input type="number" value="01">
+                                <div class="product__details-input">
+                                    <input type="number" value="01">
+                                </div>
                             </div>
                             <div class="product__details-btn-buy">MUA NGAY</div>
                         </div>
                         <div class="register__number-support">
-                            <div class="register__number-title">ĐĂNG KÝ NHẬN TƯ VẤN</div>
-                            <div class="register__number-btn">
-                                <input type="number" placeholder="Nhập số điện thoại">
+                            <div class="register__number-title">ĐĂNG KÝ NHẬN <span>TƯ VẤN</span></div>
+                            <form class="register__number-btn">
+                                <input type="number" placeholder="Số điện thoại *">
                                 <button>ĐĂNG KÝ</button>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <div class="content__productdetails-category">
+                <aside class="content__productdetails-category">
                     <div class="productdetails__category-title">
                         TẠI SAO NÊN MUA SẢN PHẨM TẠI SHOWROOM <span class="title acitve">CTLUXHOME?</span>
                     </div>
@@ -805,7 +829,7 @@
                         </span>
                         <span>Hỗ trợ thanh toán bằng thẻ tín dụng</span>
                     </div>
-                </div>
+                    </á>
             </div>
             <div class="content__specialoffers">
                 <div class="content__specialoffers-item-left f-center">
@@ -1174,14 +1198,14 @@
                             </div>
                         </div>
                         <div class="assess__edit-show">
-                            <button class="edit-assess">
+                            <div class="edit-assess">
                                 <i class="edit-assess-icon fa-solid fa-star"></i>
                                 <span>Viết đánh giá</span>
-                            </button>
-                            <button class="show-assess">
+                            </div>
+                            <div class="show-assess">
                                 <span>Xem đánh giá</span>
                                 <i class="fa-solid fa-caret-right"></i>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1256,32 +1280,31 @@
                             </h2>
                         </div>
                         <div class="product__details-news-body">
-                            <div class="list-item">
+                            <a href="" class="list-item">
                                 <img src="./assets/img/icon-mrb.png" alt="">
                                 <div class="item-text">Top 5 model máy rửa chén lớn đáng mua nhất hiện nay
                                 </div>
-                            </div>
-                            <div class="list-item">
+                            </a>
+                            <a href="" class="list-item">
                                 <img src="./assets/img/icon-mrb.png" alt="">
                                 <div class="item-text">Top 5 model máy rửa chén lớn đáng mua nhất hiện nay
                                 </div>
-                            </div>
-                            <div class="list-item">
+                            </a>
+                            <a href="" class="list-item">
                                 <img src="./assets/img/icon-mrb.png" alt="">
                                 <div class="item-text">Top 5 model máy rửa chén lớn đáng mua nhất hiện nay
                                 </div>
-                            </div>
-                            <div class="list-item">
+                            </a>
+                            <a href="" class="list-item">
                                 <img src="./assets/img/icon-mrb.png" alt="">
                                 <div class="item-text">Top 5 model máy rửa chén lớn đáng mua nhất hiện nay
                                 </div>
-                            </div>
-                            <div class="list-item">
+                            </a>
+                            <a href="" class="list-item">
                                 <img src="./assets/img/icon-mrb.png" alt="">
                                 <div class="item-text">Top 5 model máy rửa chén lớn đáng mua nhất hiện nay
                                 </div>
-                            </div>
-
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -1495,6 +1518,26 @@
             <div class="discussion__product">
                 <div class="discussion__product-block">
                     <textarea placeholder="Mời bạn thảo luận, vui lòng nhập tiếng việt có dấu"></textarea>
+                    <form action="" id="form-comment" class="form-cmt">
+                        <div class="input-file">
+                            <input type="file" name="file" id="file">
+                            <label for="file">
+                                <div class="icon">
+                                    <img src="./assets/img/ic-camera.jpg" alt="camera">
+                                </div>
+                                <div class="text">Gửi hình</div>
+                            </label>
+                        </div>
+                        <div class="block-info">
+                            <div class="info-name info-item">
+                                <input type="text" name="fullname" placeholder="Họ tên *">
+                            </div>
+                            <div class="info-email info-item">
+                                <input type="text" name="email" placeholder="Email">
+                            </div>
+                            <button>Gửi</button>
+                        </div>
+                    </form>
                 </div>
                 <div class="discussion__product-comment">
                     <div class="discussion__product-comment-title d-flex">
@@ -1787,6 +1830,127 @@
         </div>
     </footer>
 
+    <div class="specifications__details">
+        <div class="specifications__details-exit">
+            <span>✖</span>
+            Đóng
+        </div>
+        <div class="wrapper">
+            <h3>Thông số kỹ thuật chi tiết MÁY RỬA BÁT ĐỘC LẬP BOSCH SMS4HTI45E SERIE 4 12 BỘ</h3>
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            <strong>Nội dung</strong>
+                        </p>
+                    </td>
+
+                    <td>
+                        <p>
+                            <strong>Thông số kỹ thuật</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Kiểu dáng</th>
+                    <td>Máy rửa bát bán âm</td>
+                </tr>
+                <tr>
+                    <th>Nhãn năng lượng</th>
+                    <td>A++</td>
+                </tr>
+                <tr>
+                    <th>Mức độ tiêu thụ nước</th>
+                    <td>9.5L (Chế đọ Eco)</td>
+                </tr>
+                <tr>
+                    <th>Công suất rửa</th>
+                    <td>12 + bộ chén bát</td>
+                </tr>
+                <tr>
+                    <th>Công suất</th>
+                    <td>2400w</td>
+                </tr>
+                <tr>
+                    <th>Dòng điện</th>
+                    <td>10A</td>
+                </tr>
+                <tr>
+                    <th>Hiệu điện thế</th>
+                    <td>220V - 240V</td>
+                </tr>
+                <tr>
+                    <th>Tần số</th>
+                    <td>50Hz - 60Hz</td>
+                </tr>
+                <tr>
+                    <th>Chương trình rửa thường</th>
+                    <td>6 chương trình</td>
+                </tr>
+                <tr>
+                    <th>Chương trình rửa đặc biệt</th>
+                    <td>3 chương trình</td>
+                </tr>
+                <tr>
+                    <th>chế độ chống tràn</th>
+                    <td>Có</td>
+                </tr>
+                <tr>
+                    <th>Chế độ rửa nước nóng</th>
+                    <td>Có</td>
+                </tr>
+                <tr>
+                    <th>Kiểu dáng</th>
+                    <td>Máy rửa bát bán âm</td>
+                </tr>
+                <tr>
+                    <th>Nhãn năng lượng</th>
+                    <td>A++</td>
+                </tr>
+                <tr>
+                    <th>Mức độ tiêu thụ nước</th>
+                    <td>9.5L (Chế đọ Eco)</td>
+                </tr>
+                <tr>
+                    <th>Công suất rửa</th>
+                    <td>12 + bộ chén bát</td>
+                </tr>
+                <tr>
+                    <th>Công suất</th>
+                    <td>2400w</td>
+                </tr>
+                <tr>
+                    <th>Dòng điện</th>
+                    <td>10A</td>
+                </tr>
+                <tr>
+                    <th>Hiệu điện thế</th>
+                    <td>220V - 240V</td>
+                </tr>
+                <tr>
+                    <th>Tần số</th>
+                    <td>50Hz - 60Hz</td>
+                </tr>
+                <tr>
+                    <th>Chương trình rửa thường</th>
+                    <td>6 chương trình</td>
+                </tr>
+                <tr>
+                    <th>Chương trình rửa đặc biệt</th>
+                    <td>3 chương trình</td>
+                </tr>
+                <tr>
+                    <th>chế độ chống tràn</th>
+                    <td>Có</td>
+                </tr>
+                <tr>
+                    <th>Chế độ rửa nước nóng</th>
+                    <td>Có</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     <!-- ! default display none -->
     <div class="login">
         <div class="login__header">
@@ -1856,7 +2020,10 @@
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"
         type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <script src="./lightslider/lightslider.js"></script>
     <script src="owlcarousel/owl.carousel.min.js"></script>
+    <script src="./assets/js/validator.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 

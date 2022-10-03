@@ -4,6 +4,14 @@
   color: var(--color-text);
 }
 
+.content__news-guide .container {
+  display: flex;
+}
+
+.news__guide-text {
+  margin-right: 10px;
+}
+
 .news__guide-text.active {
   color: var(--color-primary);
 }
@@ -149,6 +157,49 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
   padding-bottom: 30px;
 }
 
+.item-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 25px;
+  font-size: 14px;
+}
+
+.item-text input {
+  display: none;
+}
+
+.check-box::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 6px;
+  background-color: #fff;
+  border-radius: 0;
+  position: absolute;
+  left: 0;
+  border: 1px solid #000000;
+  top: 0;
+}
+
+.item-text input[type='checkbox']:checked + label .check-box::before {
+  content: '\2713';
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
+  font-size: 12px;
+  color: var(--color-primary);
+  text-align: center;
+  line-height: 15px;
+  border: 1px solid var(--color-primary);
+}
+
+.item-text input[type='checkbox']:checked ~ label,
+.item-text input[type='checkbox']:checked ~ .quantiti {
+  color: var(--color-primary);
+}
+
 .product__block-details-title,
 .product__category-item .item-title {
   font-size: 18px;
@@ -223,7 +274,6 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
 }
 
 .product__filter-view-menu {
-  width: 209px;
   height: 39px;
   border-radius: 39px;
   border: 1px solid var(--color-border-line);
@@ -231,11 +281,36 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
   justify-content: space-between;
   align-items: center;
   margin-left: 16px;
-  padding: 0 18px;
 }
 
-.product__filter-item-grid {
+.product__filter-view-menu select {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  height: 100%;
+  border: var(--main-boder);
+  border-radius: 20px;
+  padding: 0 20px;
+  color: var(--color-text);
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  -webkit-appearance: none;
+  min-width: 210px;
+  background-image: url(../img/angle-down.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px);
+}
+
+.product__filter-item-grid,
+.product__filter-item-list {
   margin-right: 10px;
+  opacity: 0.5;
+}
+
+.product__filter-item-grid.active,
+.product__filter-item-list.active {
+  opacity: 1;
 }
 
 .content__product-wrapper .btn__pages-news {
@@ -244,4 +319,37 @@ span.ui-slider-handle.ui-corner-all.ui-state-default {
 
 .customer__service {
   margin: 0;
+}
+
+/* ! slider range */
+.irs--flat .irs-min,
+.irs--flat .irs-max,
+.irs-with-grid .irs-grid,
+.irs-handle i,
+.irs--flat .irs-handle > i:first-child,
+.irs--flat .irs-from,
+.irs--flat .irs-to {
+  display: none;
+}
+
+.irs--flat .irs-handle {
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.irs--flat .irs-line {
+  height: 5px;
+  top: 30px;
+}
+
+.irs--flat .irs-bar {
+  background-color: #000;
+  height: 5px;
+  top: 30px;
+}
+
+.footer {
+  margin-top: 0;
 }

@@ -1,14 +1,18 @@
 // ! lọc sản phẩm theo giá bằng cách kéo input range
 
-$('#slider-range').slider({
-  range: true,
-  min: 2700000,
-  max: 35500000,
-  values: [2700000, 35500000],
-  slide: function (event, ui) {
-    $('#amount-min').val(ui.values[0]);
-    $('#amount-max').val(ui.values[1]);
+$('.js-range-slider').ionRangeSlider({
+  type: 'double',
+  min: 0,
+  max: 1000,
+  from: 0,
+  to: 1000,
+  grid: true,
+  onStart: function (data) {
+    $('.price-from').html(data.from);
+    $('.price-to').html(data.to);
+  },
+  onChange: function (data) {
+    $('.price-from').html(data.from);
+    $('.price-to').html(data.to);
   },
 });
-$('#amount-min').val($('#slider-range').slider('values', 0));
-$('#amount-max').val($('#slider-range').slider('values', 1));

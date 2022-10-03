@@ -93,8 +93,13 @@
     display: block;
   }
 
+  .content__pd,
   .content__mb {
     margin-top: 107px;
+  }
+
+  .content_home {
+    margin-top: 100px;
   }
 
   .content__register {
@@ -405,6 +410,13 @@
     grid-template-columns: auto;
   }
 
+  .product__filter-view-menu select {
+    min-width: 75px;
+    font-size: 13px;
+    height: 30px;
+    padding: 0 10px;
+  }
+
   .footer {
     margin-bottom: 46px;
   }
@@ -435,8 +447,13 @@
     margin-left: 15px;
   }
 
+  .content__pd,
   .content__mb {
     margin-top: 91px;
+  }
+
+  .content_home {
+    margin-top: 100px;
   }
 
   .content__slider-slide-item,
@@ -720,6 +737,10 @@
     margin-right: 0;
   }
 
+  .content__productdetails-block-body {
+    padding: 0;
+  }
+
   .footer__register-news {
     margin: 0 15px 15px;
   }
@@ -879,11 +900,6 @@
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .container {
-    max-width: 1080px;
-    margin: 0px auto;
-  }
-
   .navbar__category-icon {
     margin-right: 5px;
   }
